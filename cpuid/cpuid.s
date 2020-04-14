@@ -8,8 +8,8 @@
 	.globl _start
 
 _start:
-	movl $0, %eax		; eax must be set to 0 before calling cpuid
-	cpuid			; a twelve byte string would be stored in ebx, ecx, and edx in that order
+	movl $0, %eax		# eax must be set to 0 before calling cpuid
+	cpuid			# a twelve byte string would be stored in ebx, ecx, and edx in that order
 	movl $output, %edi
 	movl %ebx, 28(%edi)
 	movl %edx, 32(%edi)
